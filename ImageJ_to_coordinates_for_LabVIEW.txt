@@ -1,0 +1,93 @@
+clc
+close all
+clear all
+
+%Use the comments (lines after %) in every line to guide yourself through the code
+
+%You will need to input the following values of sf and x_speed first to run this code
+
+sf=35; %Change to your liking. This is a scaling factor needed to scale the xy coordinates obtained 
+%from ImageJ to values suitable for the ASI stage to read; after hitting
+%run, check the largest axes values in "Plot 3: : Plotting scaled xy data with desired dimensions"; 
+%this one goes from 0 to about 5000 for both x and y, which means that the final pattern will have
+%dimensions of 500 by 500 microns. Higher value of sf=higher dimension of final pattern
+
+x_speed=10000; %Change accordingly; I used 100 which means 10 microns/s speed for x-axis. Use this unit 
+%conversion: if your x-speed is "a" micron/s the input for this variable is 10*a
+
+%code starts from below to convert image xy coordinates to appropriate
+%values for patterning by ASI stage, as well as generating a y axis speed file which has all
+%the variable y axis speeds keeping x-axis speed constant at x_speed value
+%chosen above
+
+Data=readmatrix('PSU'); %read xy data from text file which contains xy coordinates extracted from pattern
+%image using  ImageJ
+x=Data(:,1); %read all x values of pattern
+y=Data(:,2); %read all y values of pattern
+
+subplot(2,2,1);
+plot(x,y);
+title('Plot1: Plotting raw xy data directly from ImageJ derived XY file');
+pbaspect([2 2 1]);
+
+hold on
+
+subplot(2,2,2);
+plot(x,-y);
+title('Plot2: Plotting same data as Plot1 but after reflecting along x-axis');
+pbaspect([2 2 1]);
+
+hold on
+
+x1=sf*x; %The scaling factor you chose above is used here
+y1=-sf*y; %Scale y values as well then reflect them along x-axis to make upright figure
+
+
+subplot(2,2,3);
+plot(x1,y1);
+title('Plot3: Plotting scaled xy data with desired dimensions');
+pbaspect([2 2 1]);
+
+hold on
+
+x2=[x1(:,1)-x1(1,1)]; %Making x1 equal to zero for ease of writing
+y2=[y1(:,1)-y1(1,1)]; %Making y1 equal to zero for ease of writing
+
+
+subplot(2,2,4);
+plot(x2,y2);
+pbaspect([2 2 1]);
+title('Plot4: Plotting final xy data that will be fed to ASI stage');
+hold on
+p = plot(x2(1),y2(1),'o','MarkerFaceColor','red');
+hold off
+axis manual
+pbaspect([2 2 1]);
+
+%for k = 2:length(x2)
+    %p.XData = x2(k);
+    %p.YData = y2(k);
+    %drawnow
+%end
+
+hold on
+
+xV=x2(1:2:end); %extract every other element because raw data file has repeating elements
+yV=y2(1:2:end);
+
+xv=diff(xV); %difference between adjacent elements aka distance needed to calculate time
+yv=diff(yV);
+
+t1=abs(xv/x_speed); %Calculating time taken to go from xn to xn+1 when xSpeed 
+vy=abs(yv./t1); %Calculating velocities along the y-axis to go from yn to yn+1
+
+Coordinates=[xV yV]; %You will use these coordinates to input into stage program
+
+plot(xV,yV); %Plot to check coordinates look good in internal units
+pbaspect([2 2 1]);
+
+Vy=[vy/10000]; %Converting velocities from internal units to mm/s
+
+
+%writematrix(Coordinates, 'C:\Users\Snake_0.7by1mm.txt', 'Delimiter','tab');
+%writematrix(Vy, 'C:\Users\1mmTeddy_1000micronsperSecond_YVelocity.txt', 'Delimiter','tab');

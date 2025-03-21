@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Games</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        canvas { background: lightgray; display: block; margin: 20px auto; }
+        #shutterButton { display: none; }
+    </style>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+		        <h1>Interactive Research Games</h1>
+						<nav>
+							<ul>
+								<li>
+									<a href="index.html">About me</a>
+								</li>
+								<li>
+									<a href="research.html">Research</a>
+								</li>
+								<li>
+									<a href="projects.html">Projects</a>
+								</li>
+<li>
+									<a href="game.html">Games</a>
+								</li>
+							</ul>
+						</nav>
+    </header>
+
+  <div class="game-container">
+ <h2>Laser Induced Thermal Voxels: Deposit graphitic carbon by laser writing of liquid organic precursors</h2>
+        <h3>Tip: Align the stage which has the liquid droplet with the laser's path and open the laser shutter</h3>
+        <canvas id="game1" width="400" height="400"></canvas>
+        <button id="shutterButton">Open the laser shutter</button>
+		<div id="graphiticText">
+   <span> Graphitic carbon deposited as black spot by solvothermal reaction</span>
+</div>
+<div id="laserhead">Objective focusing 532nm Continuous Wave laser onto transparent substrate placed on pneumatic stage</div>
+    </div>
+
+<div class="game-container">
+    <h2>Creating silicon metalattices: Use High Pressure Chemical Vapor Deposition to deposit silicon in interstitial voids of nanoparticle assemblies</h2>
+    <p>Increase the pressure to push the gaseous precursor molecules into the interstitial void, then raise the temperature</p>
+	<div id="npassembly">Silica nanoparticle assembly with an interstitial void shown as white inside initially</div>
+    <div id="pressureGauge">
+        <div id="gaugeBar"></div>
+        <button id="pressureButton">Increase Pressure</button>
+    </div>
+    <canvas id="game2" width="400" height="400"></canvas>
+    <button id="temperatureButton" style="display: none;">Ramp up temperature</button>
+<div id="hpcvdText">
+   <p> High pressures reduce the mean free paths of gas molecules, allowing them to infiltrate the nanoscale interstitial voids.</p>
+<p> Increasing the temperature to pyrolysis temperature of precursor allows the gas molecules to decompose and deposit silicon in the voids.</p>
+</div>
+</div>
+
+    <script src="gamescript.js" defer></script>
+</body>
+</html>

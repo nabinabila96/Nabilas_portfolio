@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>Research Portfolio</title>
+				<link rel="stylesheet" href="styles.css">
+</head>
+				<body>
+					<header>
+						<h1>My Academic Research Portfolio</h1>
+						<nav>
+							<ul>
+								<li>
+									<a href="index.html">About me</a>
+								</li>
+								<li>
+									<a href="research.html">Research</a>
+								</li>
+								<li>
+									<a href="projects.html">Projects</a>
+								</li>
+								<li>
+									<a href="game.html">Games</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+					<section id="research">
+						<h2>Check out my research on nanomaterials engineering and process development</h2>
+							
+							<section class="research-section">
+								<div class="research-card" onclick="toggleDetails('paper1')">
+									<h3>Direct Laser Writing of Graphitic Carbon from Liquid Organic Precursors using Thermal Voxels</h3>
+									<img src="Nittany_Lion_Raman.jpg" alt="Research Image 1 ">
+										<p class="caption">
+											<b>Figure 1: This image (left is profilometry image and right is Raman spectrum of spot) demonstrates
+									the Penn State mascot Nittany Lion that I patterned 
+using laser writing of liquid organic precursor molecules on glass substrate. I used ImageJ to first extract the coordinates of a Nittany lion that 
+I drew in Adobe Illustrator, then got MATLAB to scale and convert the coordinates into values that our automated stage could read and pattern on a 
+substrate in the appropriate scale. I also had to build a program in LabVIEW to ensure that the stage followed the coordinate list properly and drew the 
+shape desired. </b>
+										</p>
+										<p> The hypothesis for this work was based on the feasibility of using Continuous Wave (CW) lasers to induce 
+solvothermal reactions in liquid organic molecules, thereby depositing some form of "laser induced graphene" on a substrate. Laser induced graphene 
+is an inexpensive way to form defective or 3D graphene from various solid polymers ranging from wood to potatoes to polyimide on laser irradiation. 
+This material helps circumvent the more expensive methods of producing graphene such as exfoliation, to produce a material that is widely tunable in 
+its structure and property and thereby can be used in a wide range of applications from sensing to catalysis to electrochemical storage.</p>
+										<p>The goal with using solvothermal decomposition of liquid organic compounds to form this "3D graphene" was to 
+expand the range of precursors that could directly deposit this 3D graphene on a wider variety of substrates without the need for transfer, say from a 
+potato to a polymer film for making a wearable sensor. Since this method had not been reported yet, I adopted a "bareback" approach and gathered each 
+and every organic precursor under the sun (aka the chemical cabinets in my lab). I then irradiated each one in series with a 632nm CW laser until some 
+of them (aka ones with an aromatic ring and a polar group attached to the ring) had the magic recipe to deposit 
+3D graphene like material on the substrates. </p>
+										<p>I am incredibly proud of this work as it was a project driven to completion 
+by me under the supervision of my brilliant advisor Dr. Lauren Zarzar, whose pioneering work on laser irradiated solvothermal deposition of 
+metal oxides set the stage for this paper.		
+										<p>Take a look at this paper for more details on the methodology and discussion.</p>
+										<p><a href="https://pubs.acs.org/doi/abs/10.1021/acs.chemmater.2c00467" target="_blank">Read More in Chemistry of 
+Materials</a></p>
+											</p>
+										</div>
+										</section>
+										
+								<section class="research-section">
+									<div class="research-card" onclick="toggleDetails('paper2')">
+										<h3>Using High Pressure Chemical Vapor Deposition (HPCVD) to deposit silicon, germanium and SiGe Metalattices</h3>
+										<img src="Metalattice.png" alt="Research Image 2 ">
+											<p class="caption">
+												<b>Figure 2: Schematic showing how semiconductor precursors (silane, germane, etc.) in  high pressure carrier gas 
+(helium) have small mean free paths and can therefore infiltrate the interstices of a silica nanoparticle assembly. When the temperature is raised to the 
+pyrolysis temperature, the precursors decompose and deposit the corresponding semiconductor in the interstices. This results in the structure shown in 
+the middle. Once the original nanoparticle spheres are etched out using isotropic etchant such as hydrofluoric acid, the resulting semiconductor film 
+looks like the scanning electron microscope image on the right. The structure-property relationship of this metalattice framework is highly tunable 
+through the selection of the nanoparticle size in the initial template, as well as the selection of the appropriate semiconductor for band gap tuning.									
+										</b>
+											</p>
+											<p>This research was a highly collaborative one in an NSF Interdisciplinary Research Group (IRG) formed
+between multiple departments and institutions. The inception of the metalattices originally came from Dr. Vincent Crespi's theoretical paper on how quantum 
+confined structures can also exist with dispersive electronic states in such structures. 
+(<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.86.696" target="_blank">Read his original work here</a>). This idea was then 
+adopted by my advisor the late Dr. John Badding and his collaborators to realize experimentally in the NSF funded IRG.
+</p>
+											<p>I started in this IRG whie it was midway through the funding cycle. From that point onwards, I contributed to 
+optimizing the porosity of metalattices from which the template had been etched out and core-shell structures, as well as exploring opportunities to deposit epitaxial silicon 
+as metalattices. I was able to experiment with various concentrations of hydrofluoric acid as well as the time required to etch the underlying silica templates 
+of different sizes, thereby enabling the tuning of thermal conductivity of silicon in metalattice form.
+												<a href="https://pubs.acs.org/doi/abs/10.1021/acsnano.9b09487" target="_blank">Read More on our 
+work on tuning the thermal conductivity of silicon nanoparticles in ACS Nano</a></p>
+											</div>
+											</section>
+											</section>
+
+
+
+
+<section class="research-section">
+									<div class="research-card" onclick="toggleDetails('paper3')">
+										<h3>Characterization work done for collaborative research projects</h3>
+											<p>Scientific progress thrives on collaboration, and my contributions to high-entropy oxide and water-splitting catalyst 
+research exemplify this synergy. Working alongside project leads who synthesized these materials, I provided expertise in X-ray Photoelectron Spectroscopy (XPS) 
+and Transmission Electron Microscopy with Energy-Dispersive Spectroscopy (TEM-EDS) to elucidate their structure and composition at the nanoscale.
+</p>
+<p> Using XPS, I analyzed the surface chemistry and oxidation states of the synthesized materials, helping to establish their electronic structure and catalytic activity. 
+Through meticulous peak deconvolution and spectral interpretation, I identified key shifts indicative of elemental interactions, defect states, and 
+chemical bonding—insights crucial for optimizing material performance.</p>
+<p> My work with TEM-EDS provided high-resolution morphological and compositional mapping, revealing the homogeneity, phase distribution, 
+and atomic-scale architecture of these complex oxides and catalysts. By refining sample preparation techniques to minimize contamination and maximize signal clarity, 
+I ensured accurate elemental quantification, allowing us to correlate local atomic environments with macroscopic material properties.</p>
+
+<p> These collaborations not only advanced our understanding of novel materials but also underscored my ability to bridge analytical expertise with fundamental 
+materials discovery—a skill set I continue to apply in pushing the frontiers of materials science and engineering.</p>			
+
+
+<p>
+<a href="https://pubs.acs.org/doi/abs/10.1021/acsaem.2c03973" target="_blank">Read the paper where I utilized XPS and TEM-EDS to characterize metal oxide catalysts used 
+for water splitting</a> 
+ and <a href="https://iopscience.iop.org/article/10.1088/2053-1591/ad068a/meta" target="_blank">our work on high entropy oxides where I characterized them using X-ray 
+diffraction (to confirm their crystalline phase) and SEM as well as TEM-EDS here to elucidate their composition.
+</a>. 
+
+</p>
+											</div>
+											</section>
+											</section>
+
+								<footer>
+									<p>&copy; 2025 Nabila Nabi Nova. All Rights Reserved.</p>
+								</footer>
+								<script src="script.js" defer></script>
+							</body>
+						</html>

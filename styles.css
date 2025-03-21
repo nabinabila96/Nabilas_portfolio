@@ -1,0 +1,470 @@
+/* General Styles */
+
+body {
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 40px;
+	background: linear-gradient(to bottom, #111, #000); /* Dark gradient */
+    line-height: 1.6;
+	background-image: url('background.jpg');
+	background-color: rgba(17,17,17,0.85); /* added background color, so the image blends well. */
+    color: #000;
+	background-size: contain; /* Or contain, adjust as needed */
+    background-repeat: repeat-y; /* Or repeat, repeat-x, repeat-y */
+    background-position: center; /* Or top, bottom, left, right, etc. */
+}
+
+
+.triangle-left-container {
+    max-width: 100%; /* Make it responsive */
+    width: auto; /* Allow it to adjust */
+    height: auto; /* Allow it to adjust */
+    background-color: #c5e3e7;
+    margin: 20px auto;
+    padding: 20px 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.cool-headline {
+font-family: "Apple Chancery", cursive;    
+font-size: 1.5vw; /* Adjust as needed, use relative units */
+    letter-spacing: 1px; /* Adjust as needed */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    flex-shrink: 0;
+}
+
+.triangle-left-container p {
+    position: static; /* Remove absolute positioning */
+}
+
+main video {
+    width: 90%; /* Reduced width */
+    height: auto; /* Reduced height */
+    max-width: 400px; /* Optional: Maximum width on larger screens */
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.hero-box {
+   font-size: 20px;
+   border: 2px solid transparent; /* Transparent border, we'll use shadow for glow */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 10px rgba(255, 215, 0, 0.7); /* Gold glow */
+    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent dark background */
+    color: yellow;
+    animation: glow-pulse 2s infinite alternate;
+}
+
+@keyframes glow-pulse {
+    from {
+        box-shadow: 0 0 10px 5px rgba(255, 215, 0, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px 10px rgba(255, 215, 0, 0.8);
+    }
+}
+
+a {
+    color: green; /* Default hyperlink color */
+    text-decoration: none; /* Removes underline */
+}
+
+.about-me-box {
+    border: 2px solid #ccc; /* Light gray border */
+    border-radius: 15px; /* Adjust for desired curve */
+    padding: 20px;
+    margin: 20px auto; /* Center the box */
+    max-width: 1000px; /* Adjust width as needed */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    background-color: #CDE2B8; /* Light background */
+}
+
+.about-me-box:hover {
+    transform: scale(1.03); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow on hover */
+    border-color: #aaa; /* Slightly darker border on hover */
+}
+
+.about-me-box h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about-me-box p {
+    line-height: 1.6;
+    color: #000;
+}
+
+
+#about, #contact {
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+    .magnifying-glass {
+      font-size: 15px;
+	color: yellow;
+      display: block;
+      width: 15em;
+      box-sizing: content-box;
+      height: 15em;
+      border: 1em solid brown;
+      position: relative;
+	margin: 0 auto; /* Center horizontally */
+      border-radius: 8em;
+    }
+    .magnifying-glass:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      right: -13em;
+      bottom: -5em;
+      border-width: 0;
+      background: brown;
+      width: 17em;
+      height: 1em;
+      transform: rotate(45deg);
+    }
+  
+
+
+
+/* Add any other existing styles here */
+
+container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+/* Research Page Image Styling */
+
+#research h2 {
+    color: yellow;
+}
+
+
+.research-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.research-item {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+research-item img {
+    width: auto;
+    max-width: 100%; /* Makes sure the image does not exceed screen width */
+    height: auto;
+    max-height: 80vh; /* Prevents image from exceeding 80% of the viewport height */
+    object-fit: contain; /* Ensures images scale proportionally without distortion */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0 auto;
+	object-fit: cover;
+}
+
+img {
+    max-width: 90%; /* Ensures the image fits within the screen width */
+    height: auto; /* Keeps aspect ratio */
+    display: block; /* Prevents unwanted inline spacing */
+    margin: 0 auto; /* Centers the image */
+    max-height: 80vh; /* Ensures the image does not take up too much vertical space */
+    object-fit: contain; /* Makes sure the entire image is visible */
+}
+
+
+caption {
+    font-size: 16px;
+    color: #555;
+    margin-top: 8px;
+    text-align: center;
+}
+
+/* Responsive Design Fix */
+@media screen and (max-width: 768px) {
+    research-item img {
+        max-height: 50vh; /* Ensures images don’t take up too much space on smaller screens */
+    }
+}
+
+
+/* Scroll Animation Styles (Corrected) */
+.research-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* This class is added when the section enters the viewport */
+.research-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.research-card {
+	background-color: #eaeaea; /* Light gray background */
+    border: 2px solid #333; /* Dark border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Space inside the box */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    margin-bottom: 20px; /* Space between projects */
+    transition: transform 0.3s ease-in-out;
+}
+
+.research-card:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+.research-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #222;
+    text-align: justify;
+}
+
+.caption {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    border-left: 4px solid #007acc; /* Blue side border */
+    font-style: italic;
+    margin-top: 10px;
+}
+
+#shutterButton {
+    font-size: 20px; 
+    padding: 15px 30px;
+    background-color: red; 
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+transform: translate(330px, -17px);
+    transition: transform 0.2s, background-color 0.3s;
+    display: none; /* Hidden until needed */
+}
+
+
+#graphiticText {
+    position: absolute;
+    left: 3px;
+    color: black;
+    opacity: 0; /* Initially invisible */
+    transform: translate(0, 0);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+#graphiticText.show {
+    opacity: 1; /* Visible when shown */
+    transform: translate(200px, -380px);
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+
+
+
+
+#laserhead {
+	position: absolute;
+	opacity: 1;
+	font-size: 13px;
+	color: blue;
+    transform: translate(200px, -120px);
+}
+
+
+.game-container {
+    position: relative; /* Ensures inner elements are positioned correctly */
+    width: 950px; /* Adjust width as needed */
+    padding: 10px; /* Space around the game */
+    border: 3px solid black; /* Bounding box */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    background-color: white; /* Background for contrast */
+    display: inline-block; /* Keeps the size compact */
+    text-align: center;
+    border-radius: 0px; /* Ensure sharp corners */
+}
+
+
+#pressureGauge {
+    width: 100px;
+    height: 200px;
+    border: 2px solid black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align items to the bottom */
+    align-items: center;
+}
+
+#gaugeBar {
+    width: 80%;
+    height: 0%;
+    background-color: blue;
+    transition: height 0.3s ease;
+    align-self: center; /* Center the bar horizontally */
+}
+
+#npassembly	{
+	position: absolute;
+	opacity: 1;
+	font-size: 15px;
+	color: purple;
+    transform: translate(220px, 300px);
+}
+
+
+#pressureButton {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+#temperatureButton {
+    padding: 10px 15px;
+    cursor: pointer;
+	font-size: 15px;
+	font-weight: bold;
+	color: red;
+    margin-top: 20px; /* Add some space between the pressure button and the temperature button */
+}
+
+#hpcvdText {
+    display: none;
+	font-weight: bold; /* Makes text bold */
+    font-size: 1em; /* Increases text size (adjust as needed) */
+    text-align: center; /* Centers text */
+    margin-top: 20px; /* Adds spacing from the top */
+	text-shadow: 0 0 10px #FFD700, 0 0 20px #FFA500, 0 0 30px #FF4500; /* Glow effect */
+}
+
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+
+/* Projects page styling*/
+
+.construction-container {
+    text-align: center;
+}
+
+.construction-text h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.construction-text p {
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+.construction-animation {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 30px auto;
+}
+
+.cone {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid orange;
+    top: 100px;
+    left: 20px;
+    animation: cone-shake 1s infinite alternate;
+}
+
+.barrier {
+    position: absolute;
+    width: 250px;
+    height: 30px;
+    background-color: red;
+    top: 50px;
+    left: 50px;
+    border-radius: 5px;
+    animation: barrier-flash 2s infinite;
+}
+
+.worker {
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    background-color: blue;
+    top: 120px;
+    left: 200px;
+    border-radius: 10px;
+    animation: worker-move 1.5s infinite alternate;
+}
+
+@keyframes cone-shake {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(5deg); }
+}
+
+@keyframes barrier-flash {
+    0% { background-color: red; }
+    50% { background-color: darkred; }
+    100% { background-color: red; }
+}
+
+@keyframes worker-move {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(20px); }
+}

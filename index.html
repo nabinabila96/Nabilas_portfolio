@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Nabila</title>
+    <link rel="stylesheet" href="styles.css">
+				</head>
+				<body>
+			<header>
+						<h1>Innovating with passion, driven by curiosity</h1>
+						<nav>
+							<ul>
+								<li>
+									<a href="index.html">About me</a>
+								</li>
+								<li>
+									<a href="research.html">Research</a>
+								</li>
+								<li>
+									<a href="projects.html">Projects</a>
+								</li>
+<li>
+									<a href="game.html">Games</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+ <div class="triangle-left-container">
+					<main>
+<p class="cool-headline">Hi, I'm Nabila, a Materials Scientist, Chemist and Engineer. Check out this elevator pitch about me generated from a text prompt about my 
+skills and experience.
+</p>
+ <video src="invideoai480_CraftingtheFuture_ MyNanomaterials_2025_03_12.mp4" controls muted loop></video>
+					</main></div>
+					<div class="hero-box">
+					   <section class="hero">
+        <h1>Thanks for visiting my Research Portfolio</h1>
+        <p>I explore materials science, semiconductor research, and engage in innovative engineering. Check out the different sections of my website to learn more about my work. 
+        <a href="research.html" class="cta-button">View My Research</a></p>
+    </section>
+</div>
+<div class="about-me-box">			
+<div class="container fade-in">		
+					<section id="about">
+						<h2>About Me</h2>
+						<p>I’m Nabila, and if I had to choose one word to describe myself, it would be "learner". 
+						I am passionate about continuously expanding my knowledge — both within and beyond my field to create meaningful impact.
+During my PhD in Chemistry, I explored novel nanomaterials using techniques like chemical vapor deposition and laser writing, 
+painstakingly tailoring parameters in the techniques to tune the composition and properties of the materials. 
+Collaborating with brilliant scientists and engineers, I studied these materials in-depth using state of the art techniques and 
+helped apply them to real-world applications, 
+such as sensors and thermoelectric devices. I have also contributed to the yield development of 2nm node in the semiconductor industry, diving deep into
+ gate-all-around transistors in 2nm and smaller node chips and how to address fabrication challenges that impact their yield, reliability and performance.</p>
+						<p>Throughout my journey as a scientist and engineer, I have encountered and embraced failure, learning to fail fast, adapt quickly and refine my approach. 
+I thrive in interdisciplinary teams, stepping up as a mentor and leader when needed. Let’s connect and innovate together!</p>
+<button id="resumeButton">Download my resume here</button>
+    <script src="resume-obfuscation.js"></script>
+					</section>
+					</div>
+</div>
+					<div class="magnifying-glass">
+					<section id="contact">
+						<div id="contact">
+							<h2>Contact Me</h2>
+							<p>Email: <span id="email"/>
+							</p>
+							<p>LinkedIn: <span id="linkedin"/>
+							</p>
+						</div>
+						<script>
+        function obfuscateEmail(encoded) {
+            let email = atob(encoded); // Decode from Base64
+            document.getElementById("email").innerHTML = 
+                '<a href="mailto:' + email + '">' + email + '</a>';
+        }
+
+        // Use your Base64-encoded email
+        obfuscateEmail("bmFiaW5hYmlsYTk2QGdtYWlsLmNvbQ==");
+
+        // Obfuscate LinkedIn Profile
+        let linkedInBase = "https://www.linkedin.com/in/nabila-nabi-nova-397a82156/";
+        let profileID = "Nabila_Nabi_Nova";  // Replace with your LinkedIn username
+        document.getElementById("linkedin").innerHTML = 
+            '<a href="' + linkedInBase + profileID + '" target="_blank">My LinkedIn</a>';
+    </script>
+					</section>
+					</div>
+					<footer>
+						<p>&copy; 2025 Nabila Nabi Nova. All Rights Reserved.</p>
+					</footer>
+					<script src="script.js" defer></script>
+				</body>
+			</html>
